@@ -1,7 +1,3 @@
-const HomePage = () => {
-  return ( 
-    <h1> Ola mundo</h1>
-   );
+export default function Home() {
+  return <h1>Bem-vindo ao FSW Donalds!</h1>;
 }
- 
-export default HomePage ;
