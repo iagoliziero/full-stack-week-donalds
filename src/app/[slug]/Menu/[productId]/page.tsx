@@ -2,8 +2,9 @@ import { notFound } from "next/navigation";
 
 import { db } from "@/lib/prisma";
 
-import ProductDetails from "./components/product-details";
-import ProductHeader from "./components/product-header";
+import ProductDetails from "./components/products-details";
+import ProductHeader from "./components/products-header";
+
 
 interface ProductPageProps {
   params: Promise<{ slug: string; productId: string }>;
@@ -23,7 +24,8 @@ const ProductPage = async ({ params }: ProductPageProps) => {
       },
     },
   });
-
+  if (!product) {
+    return notFound();
   }
   if (product.restaurant.slug.toUpperCase() !== slug.toUpperCase()) {
     return notFound();

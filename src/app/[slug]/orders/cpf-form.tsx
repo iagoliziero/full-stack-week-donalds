@@ -26,7 +26,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-import { isValidCpf, removeCpfPunctuation } from "../../menu/helpers/cpf";
+import { isValidCpf, removeCpfPunctuation } from "../Menu/helpers/cpf";
+
+
 
 const formSchema = z.object({
   cpf: z

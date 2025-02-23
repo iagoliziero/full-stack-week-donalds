@@ -11,7 +11,7 @@ import { formatCurrency } from "@/helpers/format-currency";
 
 import { CartContext } from "../contexts/cart";
 import CartSheet from "./cart-sheet";
-import Products from "./products";
+import Products from "./Products";
 
 interface RestaurantCategoriesProps {
   restaurant: Prisma.RestaurantGetPayload<{
